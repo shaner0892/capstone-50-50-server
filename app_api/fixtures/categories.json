@@ -1,0 +1,30 @@
+[
+    {
+        "model": "app_api.category",
+        "pk": 1,
+        "fields": {
+            "name": "Food and Beverage"
+        }
+    },
+    {
+        "model": "app_api.category",
+        "pk": 2,
+        "fields": {
+            "name": "Educational"
+        }
+    },
+    {
+        "model": "app_api.category",
+        "pk": 3,
+        "fields": {
+            "name": "Hiking/Nature"
+        }
+    },
+    {
+        "model": "app_api.category",
+        "pk": 4,
+        "fields": {
+            "name": "Nightlife"
+        }
+    }
+]

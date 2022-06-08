@@ -1,0 +1,46 @@
+[
+    {
+        "model": "app_api.ratereview",
+        "pk": 1,
+        "fields": {
+            "activity": 1,
+            "rating": 4,
+            "review": "So pretty but too many people",
+            "fifty_user": 1,
+            "date": "2022-06-08"
+        }
+    },
+    {
+        "model": "app_api.ratereview",
+        "pk": 2,
+        "fields": {
+            "activity": 1,
+            "rating": 5,
+            "review": "My beer was delicious",
+            "fifty_user": 2,
+            "date": "2022-06-07"
+        }
+    },
+    {
+        "model": "app_api.ratereview",
+        "pk": 3,
+        "fields": {
+            "activity": 4,
+            "rating": 5,
+            "review": "Best drag show ever!!",
+            "fifty_user": 1,
+            "date": "2022-06-08"
+        }
+    },
+    {
+        "model": "app_api.ratereview",
+        "pk": 4,
+        "fields": {
+            "activity": 3,
+            "rating": 3,
+            "review": "One of my favorite hikes",
+            "fifty_user": 2,
+            "date": "2022-06-06"
+        }
+    }
+]

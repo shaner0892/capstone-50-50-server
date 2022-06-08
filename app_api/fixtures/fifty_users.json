@@ -1,0 +1,22 @@
+[
+    {
+        "model": "app_api.fiftyuser",
+        "pk": 1,
+        "fields": {
+            "bio": "I like dogs and traveling",
+            "image_url": "https://scontent-atl3-1.xx.fbcdn.net/v/t1.6435-9/209475035_10218834200658517_3442515138236052904_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=fuaGbTLgkhIAX9GmFlE&_nc_ht=scontent-atl3-1.xx&oh=00_AT8xZt3E-jJKkOSfiepXg6XsrsOzOjfLmhEK5jlSnRdQqA&oe=62C71283",
+            "location": "Bama",
+            "user": 1
+        }
+    },
+    {
+        "model": "app_api.fiftyuser",
+        "pk": 2,
+        "fields": {
+            "bio": "I wanna be as cool as my sister",
+            "image_url": "https://scontent-atl3-1.xx.fbcdn.net/v/t1.18169-9/17759857_10210848222900032_887576207848201659_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=174925&_nc_ohc=GSU0RUupncgAX_1_-1g&_nc_ht=scontent-atl3-1.xx&oh=00_AT9c2ukYKslPYOg0xmMl0awCCqpGwQqfFStuhGiUPTCpsA&oe=62C6D268",
+            "location": "Bama",
+            "user": 2
+        }
+    }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "hs123",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "hs123",
+            "first_name": "Hilary",
+            "last_name": "Shaner",
+            "email": "hshanersd@gmail.com",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2020-06-08T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "sf123",
+            "last_login": null,
+            "is_superuser": false,
+            "username": "sf123",
+            "first_name": "Sarah",
+            "last_name": "Fittro",
+            "email": "sarah@gmail.com",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2020-05-28T14:51:39.989Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    }
+]

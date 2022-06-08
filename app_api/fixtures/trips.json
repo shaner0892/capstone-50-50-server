@@ -1,0 +1,44 @@
+[
+    {
+        "model": "app_api.trip",
+        "pk": 1,
+        "fields": {
+            "fifty_user": 1,
+            "state": 2,
+            "city": 1,
+            "about": "Went to see my birthplace and went kayaking around the ice bergs",
+            "start_date": "2022-04-01",
+            "end_date": "2022-04-08",
+            "completed": true,
+            "rating": 5
+        }
+    },
+    {
+        "model": "app_api.trip",
+        "pk": 2,
+        "fields": {
+            "fifty_user": 1,
+            "state": 3,
+            "city": 10,
+            "about": "Went with the fam to see the Grand Canyon and all the cacti!",
+            "start_date": "2021-04-01",
+            "end_date": "2021-04-08",
+            "completed": true,
+            "rating": 5
+        }
+    },
+    {
+        "model": "app_api.trip",
+        "pk": 3,
+        "fields": {
+            "fifty_user": 2,
+            "state": 6,
+            "city": 6,
+            "about": "Visited my newborn nephew for the first time! We went to a lot of breweries and did some sightseeing",
+            "start_date": "2022-05-04",
+            "end_date": "2022-05-08",
+            "completed": true,
+            "rating": 4
+        }
+    }
+]

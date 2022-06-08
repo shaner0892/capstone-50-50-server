@@ -1,0 +1,46 @@
+[
+    {
+        "model": "app_api.activity",
+        "pk": 1,
+        "fields": {
+            "title": "Drinks at Avondale",
+            "city": 1,
+            "specific_location": "Avondale Brewery",
+            "category": 1,
+            "is_approved": true
+        }
+    },
+    {
+        "model": "app_api.activity",
+        "pk": 2,
+        "fields": {
+            "title": "Ferry boat ride about the Statue of Liberty",
+            "city": 2,
+            "specific_location": "Ellis Island",
+            "category": 2,
+            "is_approved": true
+        }
+    },
+    {
+        "model": "app_api.activity",
+        "pk": 3,
+        "fields": {
+            "title": "Hike the Grand Canyon",
+            "city": 3,
+            "specific_location": "Grand Canyon",
+            "category": 3,
+            "is_approved": true
+        }
+    },
+{
+        "model": "app_api.activity",
+        "pk": 4,
+        "fields": {
+            "title": "Drag Show at Play",
+            "city": 4,
+            "specific_location": "Play Dance Bar",
+            "category": 4,
+            "is_approved": false
+        }
+    }
+]

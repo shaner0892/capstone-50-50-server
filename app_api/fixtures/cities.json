@@ -1,0 +1,162 @@
+[
+    {
+        "model": "app_api.city",
+        "pk": 1,
+        "fields": {
+            "name": "Birmingham",
+            "state": 1
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 2,
+        "fields": {
+            "name": "New York",
+            "state": 35
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 3,
+        "fields": {
+            "name": "Phoenix",
+            "state": 3
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 4,
+        "fields": {
+            "name": "Nashville",
+            "state": 41
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 5,
+        "fields": {
+            "name": "Boston",
+            "state": 30
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 6,
+        "fields": {
+            "name": "Orlando",
+            "state": 10
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 7,
+        "fields": {
+            "name": "Frankfort",
+            "state": 21
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 8,
+        "fields": {
+            "name": "Little Rock",
+            "state": 4
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 9,
+        "fields": {
+            "name": "Baton Rouge",
+            "state": 16
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 10,
+        "fields": {
+            "name": "New Orleans",
+            "state": 16
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 11,
+        "fields": {
+            "name": "Dover",
+            "state": 23
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 12,
+        "fields": {
+            "name": "Boise",
+            "state": 25
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 13,
+        "fields": {
+            "name": "Honolulu",
+            "state": 13
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 14,
+        "fields": {
+            "name": "Annapolis",
+            "state": 24
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 15,
+        "fields": {
+            "name": "Anchorage",
+            "state": 2
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 16,
+        "fields": {
+            "name": "Juneau",
+            "state": 2
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 17,
+        "fields": {
+            "name": "Augusta",
+            "state": 6
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 18,
+        "fields": {
+            "name": "Montgomery",
+            "state": 1
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 19,
+        "fields": {
+            "name": "Springfield",
+            "state": 20
+        }
+    },
+    {
+        "model": "app_api.city",
+        "pk": 20,
+        "fields": {
+            "name": "Atlanta",
+            "state": 21
+        }
+    }
+]

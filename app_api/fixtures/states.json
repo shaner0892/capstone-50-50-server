@@ -1,0 +1,652 @@
+[
+    {
+        "model": "app_api.state",
+        "pk": 1,
+        "fields": {
+            "name": "Alabama",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Alabama.svg/23px-Flag_of_Alabama.svg.png",
+            "postal_abbreviation": "AL",
+            "capital": "Montgomery",
+            "largest_city": "Birmingham",
+            "established": "Dec 14, 1819",
+            "population": 4874747
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 2,
+        "fields": {
+            "name": "Alaska",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Alaska.svg/21px-Flag_of_Alaska.svg.png",
+            "postal_abbreviation": "AK",
+            "capital": "Juneau",
+            "largest_city": "Anchorage",
+            "established": "Jan 3, 1959",
+            "population": 739795
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 3,
+        "fields": {
+            "name": "Arizona",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Arizona.svg/23px-Flag_of_Arizona.svg.png",
+            "postal_abbreviation": "AZ",
+            "capital": "Phoenix",
+            "largest_city": "Phoenix",
+            "established": "Feb 14, 1912",
+            "population": 7016270
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 4,
+        "fields": {
+            "name": "Arkansas",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Arkansas.svg/23px-Flag_of_Arkansas.svg.png",
+            "postal_abbreviation": "AR",
+            "capital": "Little Rock",
+            "largest_city": "Little Rock",
+            "established": "Jun 15, 1836",
+            "population": 3004279
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 5,
+        "fields": {
+            "name": "California",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_California.svg/23px-Flag_of_California.svg.png",
+            "postal_abbreviation": "CA",
+            "capital": "Sacramento",
+            "largest_city": "Los Angeles",
+            "established": "Sep 9, 1850",
+            "population": 39536653
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 6,
+        "fields": {
+            "name": "Colorado",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Flag_of_Colorado.svg/23px-Flag_of_Colorado.svg.png",
+            "postal_abbreviation": "CO",
+            "capital": "Denver",
+            "largest_city": "Denver",
+            "established": "Aug 1, 1876",
+            "population": 5607154
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 7,
+        "fields": {
+            "name": "Connecticut",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Flag_of_Connecticut.svg/20px-Flag_of_Connecticut.svg.png",
+            "postal_abbreviation": "CT",
+            "capital": "Hartford",
+            "largest_city": "Bridgeport",
+            "established": "Jan 9, 1788",
+            "population": 3588184
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 8,
+        "fields": {
+            "name": "Delaware",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Flag_of_Delaware.svg/23px-Flag_of_Delaware.svg.png",
+            "postal_abbreviation": "DE",
+            "capital": "Dover",
+            "largest_city": "Wilmington",
+            "established": "Dec 7, 1787",
+            "population": 961939
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 9,
+        "fields": {
+            "name": "Florida",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Florida.svg/23px-Flag_of_Florida.svg.png",
+            "postal_abbreviation": "FL",
+            "capital": "Tallahassee",
+            "largest_city": "Jacksonville",
+            "established": "Mar 3, 1845",
+            "population": 20984400
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 10,
+        "fields": {
+            "name": "Georgia",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Georgia_%28U.S._state%29.svg/23px-Flag_of_Georgia_%28U.S._state%29.svg.png",
+            "postal_abbreviation": "GA",
+            "capital": "Atlanta",
+            "largest_city": "Atlanta",
+            "established": "Jan 2, 1788",
+            "population": 10429379
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 11,
+        "fields": {
+            "name": "Hawaii",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Hawaii.svg/23px-Flag_of_Hawaii.svg.png",
+            "postal_abbreviation": "HI",
+            "capital": "Honolulu",
+            "largest_city": "Honolulu",
+            "established": "Aug 21, 1959",
+            "population": 1427538
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 12,
+        "fields": {
+            "name": "Idaho",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_Idaho.svg/19px-Flag_of_Idaho.svg.png",
+            "postal_abbreviation": "ID",
+            "capital": "Boise",
+            "largest_city": "Boise",
+            "established": "Jul 3, 1890",
+            "population": 1716943
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 13,
+        "fields": {
+            "name": "Illinois",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Illinois.svg/23px-Flag_of_Illinois.svg.png",
+            "postal_abbreviation": "IL",
+            "capital": "Springfield",
+            "largest_city": "Chicago",
+            "established": "Dec 3, 1818",
+            "population": 12802023
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 14,
+        "fields": {
+            "name": "Indiana",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Flag_of_Indiana.svg/23px-Flag_of_Indiana.svg.png",
+            "postal_abbreviation": "IN",
+            "capital": "Indianapolis",
+            "largest_city": "Indianapolis",
+            "established": "Dec 11, 1816",
+            "population": 6666818
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 15,
+        "fields": {
+            "name": "Iowa",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Iowa.svg/23px-Flag_of_Iowa.svg.png",
+            "postal_abbreviation": "IA",
+            "capital": "Des Moines",
+            "largest_city": "Des Moines",
+            "established": "Dec 28, 1846",
+            "population": 3145711
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 16,
+        "fields": {
+            "name": "Kansas",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Kansas.svg/23px-Flag_of_Kansas.svg.png",
+            "postal_abbreviation": "KS",
+            "capital": "Topeka",
+            "largest_city": "Wichita",
+            "established": "Jan 29, 1861",
+            "population": 2913123
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 17,
+        "fields": {
+            "name": "Kentucky",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_Kentucky.svg/23px-Flag_of_Kentucky.svg.png",
+            "postal_abbreviation": "KY",
+            "capital": "Frankfort",
+            "largest_city": "Louisville",
+            "established": "Jun 1, 1792",
+            "population": 4454189
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 18,
+        "fields": {
+            "name": "Louisiana",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Flag_of_Louisiana.svg/23px-Flag_of_Louisiana.svg.png",
+            "postal_abbreviation": "LA",
+            "capital": "Baton Rouge",
+            "largest_city": "New Orleans",
+            "established": "Apr 30, 1812",
+            "population": 4684333
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 19,
+        "fields": {
+            "name": "Maine",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Maine.svg/19px-Flag_of_Maine.svg.png",
+            "postal_abbreviation": "ME",
+            "capital": "Augusta",
+            "largest_city": "Portland",
+            "established": "Mar 15, 1820",
+            "population": 1335907
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 20,
+        "fields": {
+            "name": "Maryland",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Maryland.svg/23px-Flag_of_Maryland.svg.png",
+            "postal_abbreviation": "MD",
+            "capital": "Annapolis",
+            "largest_city": "Baltimore",
+            "established": "Apr 28, 1788",
+            "population": 6052177
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 21,
+        "fields": {
+            "name": "Massachusetts",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Massachusetts.svg/23px-Flag_of_Massachusetts.svg.png",
+            "postal_abbreviation": "MA",
+            "capital": "Boston",
+            "largest_city": "Boston",
+            "established": "Feb 6, 1788",
+            "population": 6859819
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 22,
+        "fields": {
+            "name": "Michigan",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Flag_of_Michigan.svg/23px-Flag_of_Michigan.svg.png",
+            "postal_abbreviation": "MI",
+            "capital": "Lansing",
+            "largest_city": "Detroit",
+            "established": "Jan 26, 1837",
+            "population": 9962311
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 23,
+        "fields": {
+            "name": "Minnesota",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Minnesota.svg/23px-Flag_of_Minnesota.svg.png",
+            "postal_abbreviation": "MN",
+            "capital": "St. Paul",
+            "largest_city": "Minneapolis",
+            "established": "May 11, 1858",
+            "population": 5576606
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 24,
+        "fields": {
+            "name": "Mississippi",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Flag_of_Mississippi.svg/23px-Flag_of_Mississippi.svg.png",
+            "postal_abbreviation": "MS",
+            "capital": "Jackson",
+            "largest_city": "Jackson",
+            "established": "Dec 10, 1817",
+            "population": 2984100
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 25,
+        "fields": {
+            "name": "Missouri",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Flag_of_Missouri.svg/23px-Flag_of_Missouri.svg.png",
+            "postal_abbreviation": "MO",
+            "capital": "Jefferson City",
+            "largest_city": "Kansas City",
+            "established": "Aug 10, 1821",
+            "population": 6113532
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 26,
+        "fields": {
+            "name": "Montana",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_Montana.svg/23px-Flag_of_Montana.svg.png",
+            "postal_abbreviation": "MT",
+            "capital": "Helena",
+            "largest_city": "Billings",
+            "established": "Nov 8, 1889",
+            "population": 1050493
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 27,
+        "fields": {
+            "name": "Nebraska",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flag_of_Nebraska.svg/23px-Flag_of_Nebraska.svg.png",
+            "postal_abbreviation": "NE",
+            "capital": "Lincoln",
+            "largest_city": "Omaha",
+            "established": "Mar 1, 1867",
+            "population": 1920076
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 28,
+        "fields": {
+            "name": "Nevada",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Flag_of_Nevada.svg/23px-Flag_of_Nevada.svg.png",
+            "postal_abbreviation": "NV",
+            "capital": "Carson City",
+            "largest_city": "Las Vegas",
+            "established": "Oct 31, 1864",
+            "population": 2998039
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 29,
+        "fields": {
+            "name": "New Hampshire",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Flag_of_New_Hampshire.svg/23px-Flag_of_New_Hampshire.svg.png",
+            "postal_abbreviation": "NH",
+            "capital": "Concord",
+            "largest_city": "Manchester",
+            "established": "Jun 21, 1788",
+            "population": 1342795
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 30,
+        "fields": {
+            "name": "New Jersey",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_New_Jersey.svg/23px-Flag_of_New_Jersey.svg.png",
+            "postal_abbreviation": "NJ",
+            "capital": "Trenton",
+            "largest_city": "Newark",
+            "established": "Dec 18, 1787",
+            "population": 9005644
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 31,
+        "fields": {
+            "name": "New Mexico",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_New_Mexico.svg/23px-Flag_of_New_Mexico.svg.png",
+            "postal_abbreviation": "NM",
+            "capital": "Santa Fe",
+            "largest_city": "Albuquerque",
+            "established": "Jan 6, 1912",
+            "population": 2088070
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 32,
+        "fields": {
+            "name": "New York",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_New_York.svg/23px-Flag_of_New_York.svg.png",
+            "postal_abbreviation": "NY",
+            "capital": "Albany",
+            "largest_city": "New York",
+            "established": "Jul 26, 1788",
+            "population": 19849399
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 33,
+        "fields": {
+            "name": "North Carolina",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Flag_of_North_Carolina.svg/23px-Flag_of_North_Carolina.svg.png",
+            "postal_abbreviation": "NC",
+            "capital": "Raleigh",
+            "largest_city": "Charlotte",
+            "established": "Nov 21, 1789",
+            "population": 10273419
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 34,
+        "fields": {
+            "name": "North Dakota",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Flag_of_North_Dakota.svg/19px-Flag_of_North_Dakota.svg.png",
+            "postal_abbreviation": "ND",
+            "capital": "Bismarck",
+            "largest_city": "Fargo",
+            "established": "Nov 2, 1889",
+            "population": 755393
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 35,
+        "fields": {
+            "name": "Ohio",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Ohio.svg/23px-Flag_of_Ohio.svg.png",
+            "postal_abbreviation": "OH",
+            "capital": "Columbus",
+            "largest_city": "Columbus",
+            "established": "Mar 1, 1803",
+            "population": 11658609
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 36,
+        "fields": {
+            "name": "Oklahoma",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Flag_of_Oklahoma.svg/23px-Flag_of_Oklahoma.svg.png",
+            "postal_abbreviation": "OK",
+            "capital": "Oklahoma City",
+            "largest_city": "Oklahoma City",
+            "established": "Nov 16, 1907",
+            "population": 3930864
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 37,
+        "fields": {
+            "name": "Oregon",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Oregon.svg/23px-Flag_of_Oregon.svg.png",
+            "postal_abbreviation": "OR",
+            "capital": "Salem",
+            "largest_city": "Portland",
+            "established": "Feb 14, 1859",
+            "population": 4142776
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 38,
+        "fields": {
+            "name": "Pennsylvania",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Pennsylvania.svg/23px-Flag_of_Pennsylvania.svg.png",
+            "postal_abbreviation": "PA",
+            "capital": "Harrisburg",
+            "largest_city": "Philadelphia",
+            "established": "Dec 12, 1787",
+            "population": 12805537
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 39,
+        "fields": {
+            "name": "Rhode Island",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Rhode_Island.svg/16px-Flag_of_Rhode_Island.svg.png",
+            "postal_abbreviation": "RI",
+            "capital": "Providence",
+            "largest_city": "Providence",
+            "established": "May 29, 1790",
+            "population": 1059639
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 40,
+        "fields": {
+            "name": "South Carolina",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Flag_of_South_Carolina.svg/23px-Flag_of_South_Carolina.svg.png",
+            "postal_abbreviation": "SC",
+            "capital": "Columbia",
+            "largest_city": "Charleston",
+            "established": "May 23, 1788",
+            "population": 5024369
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 41,
+        "fields": {
+            "name": "South Dakota",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_South_Dakota.svg/23px-Flag_of_South_Dakota.svg.png",
+            "postal_abbreviation": "SD",
+            "capital": "Pierre",
+            "largest_city": "Sioux Falls",
+            "established": "Nov 2, 1889",
+            "population": 869666
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 42,
+        "fields": {
+            "name": "Tennessee",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Tennessee.svg/23px-Flag_of_Tennessee.svg.png",
+            "postal_abbreviation": "TN",
+            "capital": "Nashville",
+            "largest_city": "Nashville",
+            "established": "Jun 1, 1796",
+            "population": 6715984
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 43,
+        "fields": {
+            "name": "Texas",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Flag_of_Texas.svg/23px-Flag_of_Texas.svg.png",
+            "postal_abbreviation": "TX",
+            "capital": "Austin",
+            "largest_city": "Houston",
+            "established": "Dec 29, 1845",
+            "population": 28304596
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 44,
+        "fields": {
+            "name": "Utah",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Utah.svg/23px-Flag_of_Utah.svg.png",
+            "postal_abbreviation": "UT",
+            "capital": "Salt Lake City",
+            "largest_city": "Salt Lake City",
+            "established": "Jan 4, 1896",
+            "population": 3101833
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 45,
+        "fields": {
+            "name": "Vermont",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Vermont.svg/23px-Flag_of_Vermont.svg.png",
+            "postal_abbreviation": "VT",
+            "capital": "Montpelier",
+            "largest_city": "Burlington",
+            "established": "Mar 4, 1791",
+            "population": 623657
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 46,
+        "fields": {
+            "name": "Virginia",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/22px-Flag_of_Virginia.svg.png",
+            "postal_abbreviation": "VA",
+            "capital": "Richmond",
+            "largest_city": "Virginia Beach",
+            "established": "Jun 25, 1788",
+            "population": 8470020
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 47,
+        "fields": {
+            "name": "Washington",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Washington.svg/23px-Flag_of_Washington.svg.png",
+            "postal_abbreviation": "WA",
+            "capital": "Olympia",
+            "largest_city": "Seattle",
+            "established": "Nov 11, 1889",
+            "population": 7405743
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 48,
+        "fields": {
+            "name": "West Virginia",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Flag_of_West_Virginia.svg/23px-Flag_of_West_Virginia.svg.png",
+            "postal_abbreviation": "WV",
+            "capital": "Charleston",
+            "largest_city": "Charleston",
+            "established": "Jun 20, 1863",
+            "population": 1815857
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 49,
+        "fields": {
+            "name": "Wisconsin",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Flag_of_Wisconsin.svg/23px-Flag_of_Wisconsin.svg.png",
+            "postal_abbreviation": "WI",
+            "capital": "Madison",
+            "largest_city": "Milwaukee",
+            "established": "May 29, 1848",
+            "population": 5795483
+        }
+    },
+    {
+        "model": "app_api.state",
+        "pk": 50,
+        "fields": {
+            "name": "Wyoming",
+            "flag_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Wyoming.svg/22px-Flag_of_Wyoming.svg.png",
+            "postal_abbreviation": "WY",
+            "capital": "Cheyenne",
+            "largest_city": "Cheyenne",
+            "established": "Jul 10, 1890",
+            "population": 579315
+        }
+    }
+]
