@@ -3,7 +3,7 @@
         "model": "auth.user",
         "pk": 1,
         "fields": {
-            "password": "hs123",
+            "password": "pbkdf2_sha256$320000$Clh7v2jmCouSJilehF23eM$jBPKDl2eieByQjapqSEl8J34zaoOL+LhUO6zjW1Tu0s=",
             "last_login": null,
             "is_superuser": false,
             "username": "hs123",
@@ -21,7 +21,7 @@
         "model": "auth.user",
         "pk": 2,
         "fields": {
-            "password": "sf123",
+            "password": "pbkdf2_sha256$320000$Clh7v2jmCouSJilehF23eM$jBPKDl2eieByQjapqSEl8J34zaoOL+LhUO6zjW1Tu0s=",
             "last_login": null,
             "is_superuser": false,
             "username": "sf123",
