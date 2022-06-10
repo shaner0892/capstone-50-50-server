@@ -13,16 +13,6 @@ from app_api.models.fifty_user import FiftyUser
 class FiftyUserView(ViewSet):
     """50/50 user view"""
 
-    def retrieve(self, request, pk):
-        """Handle GET requests for single user
-
-        Returns:
-            Response -- JSON serialized user
-        """
-        fifty_user = FiftyUser.objects.get(pk=pk)
-        serializer = FiftyUserSerializer(fifty_user)
-        return Response(serializer.data)
-
     def list(self, request):
         """Handle GET requests to get all users
 
@@ -31,6 +21,16 @@ class FiftyUserView(ViewSet):
         """
         fifty_users = FiftyUser.objects.all()
         serializer = FiftyUserSerializer(fifty_users, many=True)
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk):
+        """Handle GET requests for single user
+
+        Returns:
+            Response -- JSON serialized user
+        """
+        fifty_user = FiftyUser.objects.get(pk=request.auth.user.id)
+        serializer = FiftyUserSerializer(fifty_user)
         return Response(serializer.data)
     
     def update(self, request, pk):

@@ -13,16 +13,6 @@ from app_api.models.fifty_user import FiftyUser
 class TripView(ViewSet):
     """50/50 trips view"""
 
-    def retrieve(self, request, pk):
-        """Handle GET requests for single trip
-
-        Returns:
-            Response -- JSON serialized trip
-        """
-        trip = Trip.objects.get(pk=pk)
-        serializer = TripSerializer(trip)
-        return Response(serializer.data)
-
     def list(self, request):
         """Handle GET requests to get all trips
 
@@ -33,21 +23,33 @@ class TripView(ViewSet):
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
 
+    def retrieve(self, request, pk):
+        """Handle GET requests for single trip
+
+        Returns:
+            Response -- JSON serialized trip
+        """
+        trip = Trip.objects.get(pk=pk)
+        serializer = TripSerializer(trip)
+        return Response(serializer.data)
+
     def create(self, request):
         """Handle POST operations
 
         Returns
-            Response -- JSON serialized game instance
+            Response -- JSON serialized trip instance
         """
         fifty_user = FiftyUser.objects.get(user=request.auth.user)
+        rating = 0
         serializer = CreateTripSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save(fifty_user=fifty_user)
+        serializer.save(fifty_user=fifty_user, rating=rating)
+        trip = Trip.objects.get(pk=serializer.data["id"])
+        trip.activities.add(*request.data["activity"])
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
-    
     def update(self, request, pk):
-        """Handle PUT requests for a game
+        """Handle PUT requests for a trip
 
         Returns:
             Response -- Empty body with 204 status code
@@ -60,13 +62,14 @@ class TripView(ViewSet):
         trip.start_date = request.data["start_date"]
         trip.end_date = request.data["end_date"]
         trip.completed = request.data["completed"]
+        trip.activities.add(*request.data["activity"])
         # add rating
         trip.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
-        game = Trip.objects.get(pk=pk)
-        game.delete()
+        trip = Trip.objects.get(pk=pk)
+        trip.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
         
     @action(methods=["get"], detail=False)
@@ -100,7 +103,7 @@ class TripSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Trip
-        fields = ('id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed', 'fifty_user')
+        fields = ('id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed', 'fifty_user', 'activities')
         depth = 1
         
 class CreateTripSerializer(serializers.ModelSerializer):

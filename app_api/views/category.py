@@ -10,17 +10,7 @@ from app_api.models.category import Category
 
 
 class CategoryView(ViewSet):
-    """50/50 trips view"""
-
-    # def retrieve(self, request, pk):
-    #     """Handle GET requests for single trip
-
-    #     Returns:
-    #         Response -- JSON serialized trip
-    #     """
-    #     trip = Trip.objects.get(pk=pk)
-    #     serializer = TripSerializer(trip)
-    #     return Response(serializer.data)
+    """50/50 category view"""
 
     def list(self, request):
         """Handle GET requests to get all categories
@@ -32,6 +22,16 @@ class CategoryView(ViewSet):
         serializer = CategorySerializer(categories, many=True)
         return Response(serializer.data)
 
+    # def retrieve(self, request, pk):
+    #     """Handle GET requests for single trip
+
+    #     Returns:
+    #         Response -- JSON serialized trip
+    #     """
+    #     trip = Trip.objects.get(pk=pk)
+    #     serializer = TripSerializer(trip)
+    #     return Response(serializer.data)
+    
     # def create(self, request):
     #     """Handle POST operations
 
@@ -73,7 +73,7 @@ class CategoryView(ViewSet):
 
 class CategorySerializer(serializers.ModelSerializer):
     
-    """JSON serializer for game types
+    """JSON serializer for categories
     """
     class Meta:
         model = Category
