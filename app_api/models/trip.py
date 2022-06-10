@@ -10,5 +10,6 @@ class Trip(models.Model):
     end_date = models.DateField()
     completed = models.BooleanField()
     rating = models.IntegerField()
+    activities = models.ManyToManyField("Activity", related_name="trips")
     
     # for stretch goal state and city will become a many-to-many because they can visit multiple cities and states in one trip
