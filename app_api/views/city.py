@@ -18,8 +18,24 @@ class CityView(ViewSet):
         Returns:
             Response -- JSON serialized list of cities
         """
-        cities = City.objects.all()
+        cities = City.objects.order_by('name')
+        state = request.query_params.get('state', None)
+        
+        # return only the cities that are in the state the user chose
+        if state is not None:
+            cities = cities.filter(state__id=state)
+        
         serializer = CitySerializer(cities, many=True)
+        return Response(serializer.data)
+    
+    def retrieve(self, request, pk):
+        """Handle GET requests for single user
+
+        Returns:
+            Response -- JSON serialized user
+        """
+        city = City.objects.get(pk=pk)
+        serializer = CitySerializer(city)
         return Response(serializer.data)
 
     def create(self, request):
@@ -33,7 +49,26 @@ class CityView(ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+    
+    def update(self, request, pk):
+        """Handle PUT requests for a city
 
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+
+        city = City.objects.get(pk=pk)
+        city.name = request.data["name"]
+        city.state = request.data["state"]
+        city.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+    def destroy(self, request, pk):
+        city = City.objects.get(pk=pk)
+        city.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        
 
 class CitySerializer(serializers.ModelSerializer):
     

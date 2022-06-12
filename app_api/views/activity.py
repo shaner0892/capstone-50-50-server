@@ -42,24 +42,24 @@ class ActivityView(ViewSet):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
     
-    # def update(self, request, pk):
-    #     """Handle PUT requests for a game
+    def update(self, request, pk):
+        """Handle PUT requests for an activity
 
-    #     Returns:
-    #         Response -- Empty body with 204 status code
-    #     """
+        Returns:
+            Response -- Empty body with 204 status code
+        """
 
-    #     trip = Trip.objects.get(pk=pk)
-    #     trip.state = request.data["state"]
-    #     trip.city = request.data["city"]
-    #     trip.about = request.data["about"]
-    #     trip.start_date = request.data["start_date"]
-    #     trip.end_date = request.data["end_date"]
-    #     trip.completed = request.data["completed"]
-    #     # add rating
-    #     trip.save()
+        activity = Activity.objects.get(pk=pk)
+        activity.title = request.data["title"]
+        activity.state = request.data["state"]
+        activity.city = request.data["city"]
+        activity.specific_location = request.data["specific_location"]
+        activity.category = request.data["end_date"]
+        activity.is_approved = request.data["is_approved"]
+        # add rating
+        activity.save()
 
-    #     return Response(None, status=status.HTTP_204_NO_CONTENT)
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     def destroy(self, request, pk):
         activity = Activity.objects.get(pk=pk)
