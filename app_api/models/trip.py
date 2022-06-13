@@ -2,9 +2,9 @@ from django.db import models
 
 class Trip(models.Model):
 
-    fifty_user = models.ForeignKey("FiftyUser", on_delete=models.CASCADE)
+    fifty_user = models.ForeignKey("FiftyUser", on_delete=models.CASCADE, related_name="trips")
     state = models.ForeignKey("State", on_delete=models.CASCADE)
-    city = models.ForeignKey("City", on_delete=models.CASCADE)
+    city = models.CharField(max_length=20)
     about = models.CharField(max_length=500)
     start_date = models.DateField()
     end_date = models.DateField()

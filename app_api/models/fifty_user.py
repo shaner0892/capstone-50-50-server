@@ -8,5 +8,10 @@ class FiftyUser(models.Model):
     location = models.CharField(max_length=100)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    # add a custom property to include the states they have visited
-    
+    # add a custom property to include the states each user has visited
+    @property
+    def states_visited(self):
+        states = []
+        for trip in self.trips.all():
+            states.append(trip.state)
+        return states

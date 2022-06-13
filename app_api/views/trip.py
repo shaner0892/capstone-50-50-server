@@ -7,6 +7,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from app_api.models.trip import Trip
+from app_api.models.state import State
 from app_api.models.fifty_user import FiftyUser
 
 
@@ -56,7 +57,8 @@ class TripView(ViewSet):
         """
 
         trip = Trip.objects.get(pk=pk)
-        trip.state = request.data["state"]
+        state = State.objects.get(pk=request.data["state"]["id"])
+        trip.state = state
         trip.city = request.data["city"]
         trip.about = request.data["about"]
         trip.start_date = request.data["start_date"]
