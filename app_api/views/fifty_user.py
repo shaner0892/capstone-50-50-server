@@ -8,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework import serializers, status
 from app_api.models.trip import Trip
 from app_api.models.fifty_user import FiftyUser
+from app_api.views.state import StateSerializer
 
 
 class FiftyUserView(ViewSet):
@@ -62,8 +63,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 class FiftyUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
-
+    states_visited = StateSerializer(many=True)
     class Meta:
         model = FiftyUser
-        fields = ('id', 'bio', 'location', 'user')
+        fields = ('id', 'bio', 'location', 'user', 'states_visited')
         depth = 2
