@@ -20,7 +20,6 @@ from django.urls import path
 from app_api.views import register_user, login_user
 from app_api.views.activity import ActivityView
 from app_api.views.category import CategoryView
-from app_api.views.city import CityView
 from app_api.views.fifty_user import FiftyUserView
 from app_api.views.state import StateView
 from app_api.views.trip import TripView
@@ -32,7 +31,6 @@ router.register(r'categories', CategoryView, 'category')
 router.register(r'trips', TripView, 'trip')
 router.register(r'fiftyusers', FiftyUserView, 'fiftyuser')
 router.register(r'states', StateView, 'state')
-router.register(r'cities', CityView, 'city')
 router.register(r'activities', ActivityView, 'activity')
 
 

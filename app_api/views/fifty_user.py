@@ -30,7 +30,7 @@ class FiftyUserView(ViewSet):
         Returns:
             Response -- JSON serialized user
         """
-        fifty_user = FiftyUser.objects.get(pk=request.auth.user.id)
+        fifty_user = FiftyUser.objects.get(user=request.auth.user)
         serializer = FiftyUserSerializer(fifty_user)
         return Response(serializer.data)
     
@@ -47,6 +47,7 @@ class FiftyUserView(ViewSet):
         user.last_name = request.data["last_name"]
         user.username = request.data["username"]
         user.email = request.data["email"]
+        user.is_active = request.data["is_active"]
         user.save()
         fifty_user.location = request.data["location"]
         fifty_user.bio = request.data["bio"]
@@ -54,11 +55,10 @@ class FiftyUserView(ViewSet):
         return Response(None, status=status.HTTP_204_NO_CONTENT)
         
 
-
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'email')
+        fields = ('id', 'username', 'first_name', 'last_name', 'email', 'is_active', 'is_staff')
 
 
 class FiftyUserSerializer(serializers.ModelSerializer):

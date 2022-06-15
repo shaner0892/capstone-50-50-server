@@ -32,6 +32,23 @@ class StateView(ViewSet):
         serializer = StateSerializer(state)
         return Response(serializer.data)
     
+    def update(self, request, pk):
+        """Handle PUT requests for a state
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        state = State.objects.get(pk=pk)
+        state.name = request.data["name"]
+        state.postal_abbreviation = request.data["postal_abbreviation"]
+        state.capital = request.data["capital"]
+        state.established = request.data["established"]
+        state.population = request.data["population"]
+        state.flag_url = request.data["flag_url"]
+        state.largest_city = request.data["largest_city"]
+        state.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+        
 
 class StateSerializer(serializers.ModelSerializer):
     
@@ -42,7 +59,3 @@ class StateSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'postal_abbreviation', 'capital', 'established', 'population', 'flag_url', 'largest_city')
         depth = 1
         
-# class CreateTripSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Trip
-#         fields = ['id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed']
