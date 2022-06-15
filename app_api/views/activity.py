@@ -41,14 +41,12 @@ class ActivityView(ViewSet):
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
-    
     def update(self, request, pk):
         """Handle PUT requests for an activity
 
         Returns:
             Response -- Empty body with 204 status code
         """
-
         activity = Activity.objects.get(pk=pk)
         activity.title = request.data["title"]
         activity.state = request.data["state"]
@@ -66,7 +64,6 @@ class ActivityView(ViewSet):
         activity.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
         
-
 
 class ActivitySerializer(serializers.ModelSerializer):
     

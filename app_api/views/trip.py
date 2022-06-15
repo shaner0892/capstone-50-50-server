@@ -46,6 +46,7 @@ class TripView(ViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save(fifty_user=fifty_user, rating=rating)
         trip = Trip.objects.get(pk=serializer.data["id"])
+        # here we are adding one activity at a time to the trip.activities array
         trip.activities.add(*request.data["activity"])
         return Response(serializer.data, status=status.HTTP_201_CREATED)
         
@@ -57,7 +58,7 @@ class TripView(ViewSet):
         """
 
         trip = Trip.objects.get(pk=pk)
-        state = State.objects.get(pk=request.data["state"]["id"])
+        state = State.objects.get(pk=request.data["state"])
         trip.state = state
         trip.city = request.data["city"]
         trip.about = request.data["about"]
@@ -89,7 +90,6 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('id', 'username', 'first_name', 'last_name')
 
-
 class FiftyUserSerializer(serializers.ModelSerializer):
     user = UserSerializer()
 
@@ -99,7 +99,7 @@ class FiftyUserSerializer(serializers.ModelSerializer):
         
 class TripSerializer(serializers.ModelSerializer):
     
-    """JSON serializer for game types
+    """JSON serializer for trips
     """
     fifty_user = FiftyUserSerializer()
     
@@ -111,4 +111,4 @@ class TripSerializer(serializers.ModelSerializer):
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ['id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed']
+        fields = ['id', 'state', 'city', 'start_date', 'end_date', 'completed']

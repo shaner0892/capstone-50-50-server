@@ -22,54 +22,42 @@ class CategoryView(ViewSet):
         serializer = CategorySerializer(categories, many=True)
         return Response(serializer.data)
 
-    # def retrieve(self, request, pk):
-    #     """Handle GET requests for single trip
+    def retrieve(self, request, pk):
+        """Handle GET requests for single category
 
-    #     Returns:
-    #         Response -- JSON serialized trip
-    #     """
-    #     trip = Trip.objects.get(pk=pk)
-    #     serializer = TripSerializer(trip)
-    #     return Response(serializer.data)
+        Returns:
+            Response -- JSON serialized category
+        """
+        category = Category.objects.get(pk=pk)
+        serializer = CategorySerializer(category)
+        return Response(serializer.data)
     
-    # def create(self, request):
-    #     """Handle POST operations
+    def create(self, request):
+        """Handle POST operations
 
-    #     Returns
-    #         Response -- JSON serialized game instance
-    #     """
-    #     fifty_user = FiftyUser.objects.get(user=request.auth.user)
-    #     serializer = CreateTripSerializer(data=request.data)
-    #     serializer.is_valid(raise_exception=True)
-    #     serializer.save(fifty_user=fifty_user)
-    #     return Response(serializer.data, status=status.HTTP_201_CREATED)
+        Returns
+            Response -- JSON serialized category instance
+        """
+        serializer = CreateCategorySerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
         
+    def update(self, request, pk):
+        """Handle PUT requests for a category
+
+        Returns:
+            Response -- Empty body with 204 status code
+        """
+        category = Category.objects.get(pk=pk)
+        category.save()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
-    # def update(self, request, pk):
-    #     """Handle PUT requests for a game
-
-    #     Returns:
-    #         Response -- Empty body with 204 status code
-    #     """
-
-    #     trip = Trip.objects.get(pk=pk)
-    #     trip.state = request.data["state"]
-    #     trip.city = request.data["city"]
-    #     trip.about = request.data["about"]
-    #     trip.start_date = request.data["start_date"]
-    #     trip.end_date = request.data["end_date"]
-    #     trip.completed = request.data["completed"]
-    #     # add rating
-    #     trip.save()
-
-    #     return Response(None, status=status.HTTP_204_NO_CONTENT)
-    
-    # def destroy(self, request, pk):
-    #     game = Trip.objects.get(pk=pk)
-    #     game.delete()
-    #     return Response(None, status=status.HTTP_204_NO_CONTENT)
+    def destroy(self, request, pk):
+        category = Category.objects.get(pk=pk)
+        category.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
         
-
 
 class CategorySerializer(serializers.ModelSerializer):
     
@@ -80,7 +68,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ('id', 'name')
         depth = 1
         
-# class CreateTripSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Trip
-#         fields = ['id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed']
+class CreateCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name']
