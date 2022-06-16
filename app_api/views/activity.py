@@ -1,10 +1,14 @@
 """View module for handling requests about game types"""
+from unicodedata import category
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
 from app_api.models.activity import Activity
+from app_api.models.state import State
+from app_api.models.category import Category
+
 
 
 class ActivityView(ViewSet):
@@ -48,11 +52,14 @@ class ActivityView(ViewSet):
             Response -- Empty body with 204 status code
         """
         activity = Activity.objects.get(pk=pk)
+        # the front end is only sending an id so you need to get the whole object for state and category
+        state = State.objects.get(pk=request.data["state"])
+        category = Category.objects.get(pk=request.data["category"])
         activity.title = request.data["title"]
-        activity.state = request.data["state"]
+        activity.state = state
         activity.city = request.data["city"]
         activity.specific_location = request.data["specific_location"]
-        activity.category = request.data["end_date"]
+        activity.category = category
         activity.is_approved = request.data["is_approved"]
         # add rating
         activity.save()
