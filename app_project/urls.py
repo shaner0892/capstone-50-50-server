@@ -23,6 +23,7 @@ from app_api.views.category import CategoryView
 from app_api.views.fifty_user import FiftyUserView
 from app_api.views.state import StateView
 from app_api.views.trip import TripView
+from app_api.views.trip_picture import TripPictureView
 
 
 router = routers.DefaultRouter(trailing_slash=False)
@@ -32,6 +33,8 @@ router.register(r'trips', TripView, 'trip')
 router.register(r'fiftyusers', FiftyUserView, 'fiftyuser')
 router.register(r'states', StateView, 'state')
 router.register(r'activities', ActivityView, 'activity')
+router.register(r'trip_pictures', TripPictureView, 'trip_picture')
+
 
 
 

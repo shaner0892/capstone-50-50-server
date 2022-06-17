@@ -51,6 +51,7 @@ class FiftyUserView(ViewSet):
         user.save()
         fifty_user.location = request.data["location"]
         fifty_user.bio = request.data["bio"]
+        fifty_user.image_url = request.data["image_url"]
         fifty_user.save()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
         
@@ -66,5 +67,5 @@ class FiftyUserSerializer(serializers.ModelSerializer):
     states_visited = StateSerializer(many=True)
     class Meta:
         model = FiftyUser
-        fields = ('id', 'bio', 'location', 'user', 'states_visited')
+        fields = ('id', 'bio', 'location', 'image_url', 'user', 'states_visited')
         depth = 2
