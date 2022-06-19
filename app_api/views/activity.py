@@ -21,6 +21,9 @@ class ActivityView(ViewSet):
             Response -- JSON serialized list of activities
         """
         activities = Activity.objects.filter(is_approved=True)
+        category = request.query_params.get('category', None)        
+        if category is not None:
+            activities = activities.filter(category__id=category) 
         serializer = ActivitySerializer(activities, many=True)
         return Response(serializer.data)
     
@@ -58,7 +61,6 @@ class ActivityView(ViewSet):
         activity.title = request.data["title"]
         activity.state = state
         activity.city = request.data["city"]
-        activity.specific_location = request.data["specific_location"]
         activity.category = category
         activity.is_approved = request.data["is_approved"]
         # add rating
@@ -78,10 +80,10 @@ class ActivitySerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Activity
-        fields = ('id', 'title', 'state', 'city', 'specific_location', 'category', 'is_approved')
+        fields = ('id', 'title', 'state', 'city', 'category', 'is_approved')
         depth = 1
         
 class CreateActivitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Activity
-        fields = ['id', 'title', 'state', 'city', 'specific_location', 'category', 'is_approved']
+        fields = ['id', 'title', 'state', 'city', 'category', 'is_approved']
