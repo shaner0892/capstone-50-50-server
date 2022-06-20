@@ -58,7 +58,7 @@ def register_user(request):
     fifty_user = FiftyUser.objects.create(
         bio=request.data['bio'],
         location=request.data['location'],
-        image_url=request.data['image_url'],
+        url=request.data['image_url'],
         user=new_user
     )
     

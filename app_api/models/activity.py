@@ -8,18 +8,18 @@ class Activity(models.Model):
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
     is_approved = models.BooleanField()
     
-    # @property
-    # def average_rating(self):
-    #     """Average rating calculated attribute for each product
-    #     Returns:
-    #         number -- The average rating for the product
-    #     """
-    #     total_rating = 0
-    #     try:
-    #         for rating in self.ratings.all():
-    #             total_rating += rating.score
+    @property
+    def average_rating(self):
+        """Average rating calculated attribute for each activity
+        Returns:
+            number -- The average rating for the activity
+        """
+        total_rating = 0
+        try:
+            for rating in self.ratings.all():
+                total_rating += rating.rating
 
-    #         avg = total_rating / self.ratings.count()
-    #         return avg
-    #     except: 
-    #         return "No ratings yet"
+            avg = total_rating / self.ratings.count()
+            return avg
+        except: 
+            return "No ratings yet"

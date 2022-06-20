@@ -21,6 +21,9 @@ class TripView(ViewSet):
             Response -- JSON serialized list of trips filtered by user
         """
         trips = Trip.objects.all()
+        state = request.query_params.get('state', None)  
+        if state is not None:
+            trips = trips.filter(state__id=state)              
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
 
@@ -41,7 +44,6 @@ class TripView(ViewSet):
             Response -- JSON serialized trip instance
         """
         fifty_user = FiftyUser.objects.get(user=request.auth.user)
-        # rating = 0
         serializer = CreateTripSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(fifty_user=fifty_user)
