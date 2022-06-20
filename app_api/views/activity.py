@@ -1,5 +1,4 @@
 """View module for handling requests about game types"""
-from unicodedata import category
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
 from rest_framework.viewsets import ViewSet
@@ -20,10 +19,13 @@ class ActivityView(ViewSet):
         Returns:
             Response -- JSON serialized list of activities
         """
-        activities = Activity.objects.filter(is_approved=True)
-        category = request.query_params.get('category', None)        
+        activities = Activity.objects.all()
+        category = request.query_params.get('category', None) 
+        state = request.query_params.get('state', None)               
         if category is not None:
             activities = activities.filter(category__id=category) 
+        if state is not None:
+            activities = activities.filter(state__id=state) 
         serializer = ActivitySerializer(activities, many=True)
         return Response(serializer.data)
     
@@ -80,7 +82,7 @@ class ActivitySerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Activity
-        fields = ('id', 'title', 'state', 'city', 'category', 'is_approved')
+        fields = ('id', 'title', 'state', 'city', 'category', 'is_approved', 'average_rating')
         depth = 1
         
 class CreateActivitySerializer(serializers.ModelSerializer):
