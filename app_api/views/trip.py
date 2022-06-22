@@ -66,7 +66,7 @@ class TripView(ViewSet):
         trip.about = request.data["about"]
         trip.start_date = request.data["start_date"]
         trip.end_date = request.data["end_date"]
-        trip.completed = request.data["completed"]
+        # here we are adding one activity at a time to the trip.activities array
         trip.activities.add(*request.data["activity"])
         trip.rating = request.data["rating"]
         trip.save()
@@ -107,10 +107,10 @@ class TripSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Trip
-        fields = ('id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed', 'fifty_user', 'activities', 'rating')
+        fields = ('id', 'state', 'city', 'about', 'start_date', 'end_date', 'fifty_user', 'activities', 'rating')
         depth = 1
         
 class CreateTripSerializer(serializers.ModelSerializer):
     class Meta:
         model = Trip
-        fields = ['id', 'state', 'city', 'about', 'start_date', 'end_date', 'completed', 'rating']
+        fields = ['id', 'state', 'city', 'about', 'start_date', 'end_date', 'rating']

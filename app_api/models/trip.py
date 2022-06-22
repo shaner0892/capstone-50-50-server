@@ -8,7 +8,6 @@ class Trip(models.Model):
     about = models.CharField(max_length=500)
     start_date = models.DateField()
     end_date = models.DateField()
-    completed = models.BooleanField()
     rating = models.IntegerField()
     activities = models.ManyToManyField("Activity", related_name="trips")
     
