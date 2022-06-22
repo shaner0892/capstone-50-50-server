@@ -20,12 +20,17 @@ class ActivityView(ViewSet):
             Response -- JSON serialized list of activities
         """
         activities = Activity.objects.all()
+        # user is able to filter by category or state, or sort by rating
+        # request that info and apply selected filters, otherwise return all activities
         category = request.query_params.get('category', None) 
-        state = request.query_params.get('state', None)               
+        state = request.query_params.get('state', None)
+        rating = request.query_params.get('rating', None)               
         if category is not None:
             activities = activities.filter(category__id=category) 
         if state is not None:
             activities = activities.filter(state__id=state) 
+        if rating is not None:
+            activities = activities.order_by(rating)
         serializer = ActivitySerializer(activities, many=True)
         return Response(serializer.data)
     
