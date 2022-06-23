@@ -14,3 +14,6 @@ WHERE id IS 45
 UPDATE app_api_activity
 SET title = "Level 256 Classic Arcade Bar"
 WHERE id IS 45
+
+UPDATE app_api_activity
+SET is_approved = 1

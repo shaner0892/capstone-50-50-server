@@ -14,10 +14,10 @@ class ReviewView(ViewSet):
     """50/50 review view"""
 
     def list(self, request):
-        """Handle GET requests to get all reviews
+        """Handle GET requests to get all reviews for an activity
 
         Returns:
-            Response -- JSON serialized list of reviews
+            Response -- JSON serialized list of review for an activity
         """
         activity = self.request.query_params.get("activity", None)
         reviews = RateReview.objects.filter(activity_id=activity)           
