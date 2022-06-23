@@ -1,12 +1,10 @@
-"""View module for handling requests about game types"""
+"""View module for handling requests about users"""
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
-from rest_framework.decorators import action
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from app_api.models.trip import Trip
 from app_api.models.fifty_user import FiftyUser
 from app_api.views.state import StateSerializer
 
