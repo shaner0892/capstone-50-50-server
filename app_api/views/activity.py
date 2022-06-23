@@ -13,13 +13,12 @@ class ActivityView(ViewSet):
     """50/50 activity view"""
 
     def list(self, request):
-        """Handle GET requests to get all activities
+        """Handle GET requests to get all approved activities
 
         Returns:
             Response -- JSON serialized list of activities
         """
-        # activities = Activity.objects.filter(is_approved=True)
-        activities = Activity.objects.all()
+        activities = Activity.objects.filter(is_approved=True)
         # user is able to filter by category or state, or sort by rating
         # request that info and apply selected filters, otherwise return all activities
         category = request.query_params.get('category', None) 

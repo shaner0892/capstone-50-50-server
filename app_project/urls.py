@@ -37,12 +37,6 @@ router.register(r'activities', ActivityView, 'activity')
 router.register(r'trip_pictures', TripPictureView, 'trip_picture')
 router.register(r'reviews', ReviewView, 'review')
 
-
-
-
-
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register_user),

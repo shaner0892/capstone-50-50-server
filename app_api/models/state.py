@@ -11,11 +11,3 @@ class State(models.Model):
     largest_city = models.CharField(max_length=50)
     
     # add a custom property of best_activities for each state
-    
-    # @property 
-    # def best_activities(self):
-    #     return self.__best_activities
-    
-    # @best_activities.setter
-    # def best_activities(self, value):
-    #     self.__best_activities = value
