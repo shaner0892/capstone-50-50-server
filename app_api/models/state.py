@@ -10,7 +10,7 @@ class State(models.Model):
     flag_url = models.CharField(max_length=1000)
     largest_city = models.CharField(max_length=50)
     
-    # add a custom property of best_activities
+    # add a custom property of best_activities for each state
     
     # @property 
     # def best_activities(self):

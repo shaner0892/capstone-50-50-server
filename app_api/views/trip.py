@@ -1,4 +1,4 @@
-"""View module for handling requests about game types"""
+"""View module for handling requests about trips"""
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
@@ -20,10 +20,14 @@ class TripView(ViewSet):
         Returns:
             Response -- JSON serialized list of trips filtered by user
         """
+        # allow trips to be filtered by state or sorted by rating
         trips = Trip.objects.all()
-        state = request.query_params.get('state', None)  
+        state = request.query_params.get('state', None)
+        rating = request.query_params.get('rating', None)
         if state is not None:
-            trips = trips.filter(state__id=state)              
+            trips = trips.filter(state__id=state)   
+        if rating is not None:
+            trips = trips.order_by('-rating')   
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
 
@@ -80,9 +84,15 @@ class TripView(ViewSet):
     @action(methods=["get"], detail=False)
     def my_trips(self, request):
         user = FiftyUser.objects.get(user=request.auth.user)
-        # (user on the left side is the property on trip you are referring to, 
-        # user on the right is the one you just defined that you want to compare it to)
+        # user on the left side is the property on trip you are referring to, 
+        # user on the right is the one you just defined that you want to compare it to
         trips = Trip.objects.filter(fifty_user=user)
+        state = request.query_params.get('state', None)
+        rating = request.query_params.get('rating', None)
+        if state is not None:
+            trips = trips.filter(state__id=state)   
+        if rating is not None:
+            trips = trips.order_by('-rating')   
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
 

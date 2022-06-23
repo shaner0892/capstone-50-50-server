@@ -1,8 +1,6 @@
-"""View module for handling requests about game types"""
+"""View module for handling requests about trip pictures"""
 from django.http import HttpResponseServerError
 from django.core.exceptions import ValidationError
-from django.contrib.auth.models import User
-from rest_framework.decorators import action
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
@@ -55,7 +53,6 @@ class TripPictureView(ViewSet):
 
         trip_picture = TripPicture.objects.get(pk=pk)
         trip = Trip.objects.get(pk=request.data["trip"])
-        # trip_picture.picture_url.add(*request.data["picture_url"])
         trip_picture.url = request.data["url"]
         trip_picture.save(trip=trip)
         return Response(None, status=status.HTTP_204_NO_CONTENT)
