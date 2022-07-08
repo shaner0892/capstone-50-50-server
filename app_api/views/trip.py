@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
+from app_api.models.activity import Activity
 from app_api.models.trip import Trip
 from app_api.models.state import State
 from app_api.models.fifty_user import FiftyUser
@@ -95,6 +96,18 @@ class TripView(ViewSet):
             trips = trips.order_by('-rating')   
         serializer = TripSerializer(trips, many=True)
         return Response(serializer.data)
+    
+    # this is not working yet
+    # write a custom action that removes an activity from a trip
+    @action(methods=['delete'], detail=True)
+    def remove_activity(self, request, pk):
+        """Delete request to remove an activity from a trip"""
+    
+        activity = Activity.objects.get(pk=request.query_params.get('activity', None))
+        trip = Trip.objects.get(pk=pk)
+        trip.activities.remove(activity)
+        return Response({'message': 'Activity removed'}, status=status.HTTP_204_NO_CONTENT)
+    
 
 
 class UserSerializer(serializers.ModelSerializer):

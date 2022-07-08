@@ -17,3 +17,5 @@ WHERE id IS 45
 
 UPDATE app_api_activity
 SET is_approved = 1
+
+DELETE FROM app_api_trippicture WHERE id = 117
