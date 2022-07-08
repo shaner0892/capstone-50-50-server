@@ -17,13 +17,13 @@ View the wireframe [here](https://sketchboard.me/ZDhTtbimcPL#/)
 ## Instructions for Installing and Running this App
 
 1. Clone down the client side repo:
-git@github.com:shaner0892/nss-capstone-furry-friends.git
+git@github.com:shaner0892/capstone-50-50-client.git
 2. In the project directory, run:
 npm start
 3. Clone down the server side repo:
-git@github.com:shaner0892/nss-capstone-furry-friends-api.git
+git@github.com:shaner0892/capstone-50-50-server.git
 4. In the API directory, start the JSON server with:
-python manage.py
+python3 manage.py runserver
 5. Visit local host
 
 ## Special Thanks to
